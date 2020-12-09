@@ -1,0 +1,28 @@
+[
+  {
+    "type": "string",
+    "name": "pathToMayaScene",
+    "label": "Path to maya scene",
+    "default": "D:\\Maya\\Earth\\scenes\\Earth.ma"
+  },
+  {
+    "type": "integer",
+    "name": "threads",
+    "label": "Set number of threads",
+    "default": 0,
+    "min": -10,
+    "max": 256
+  },
+  {
+    "type": "integer",
+    "name": "resolutionX",
+    "label": "Resolution X",
+    "default": 1920
+  },
+  {
+    "type": "integer",
+    "name": "resolutionY",
+    "label": "Resolution Y",
+    "default": 1080
+  }
+]
