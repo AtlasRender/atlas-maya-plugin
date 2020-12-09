@@ -22,7 +22,10 @@ cp.stdout.on("data", async (data) => {
     for (let i = 0; i < cols.length; i++) {
         if (cols[i].includes("% d")) {
             console.log(cols[i].substr(2, 4));
-            await sendReport("info", {Processing: `${cols[i].substr(2, 4)}`});
+            if(!isNaN(cols[i].substr(2, 3))){
+                console.log(cols[i].substr(2, 3));
+                await sendReport("info", {Processing: `${cols[i].substr(2, 4)}`});
+            }
         }
     }
     await sendReport("info", {message: data});
