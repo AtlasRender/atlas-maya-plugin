@@ -8,6 +8,7 @@ const resolutionY = pluginSettings.resolutionY;
 
 const command = [
     `"${pathToMaya}\\Render.exe" -r arnold -ai:lve 3 `,
+    `-preRender "setAttr "defaultRenderGlobals.modifyExtension" 1; setAttr "defaultRenderGlobals.startExtension" ${renumbered};" `,
     `-s ${frame} -e ${frame} -x ${resolutionX} -y ${resolutionY} -ai:threads ${threads} `,
     `"${pathToMayaScene}"`
 ].join("");
