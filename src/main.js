@@ -3,7 +3,7 @@ const {exec} = require("child_process");
 const command = [
     `"${env.pathToMaya}\\Render.exe" -r arnold -ai:lve 3 `,
     `-s ${frame} -e ${frame} -x ${pluginSettings.resolutionX} -y ${pluginSettings.resolutionY} -ai:threads ${pluginSettings.threads} `,
-    `${pluginSettings.pathToMayaScene}`
+    `"${pluginSettings.pathToMayaScene}"`
 ].join("");
 
 const cp = exec(command, (error, stdout, stderr) => {
