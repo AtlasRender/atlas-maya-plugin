@@ -1,6 +1,6 @@
 {
-  "name": "atlas-blender-plugin",
+  "name": "atlas-maya-plugin",
   "version": "0.1.8",
-  "description": "blender",
-  "note": "add correct filepath"
+  "description": "maya",
+  "note": "add output folder"
 }

@@ -6,6 +6,12 @@
     "default": "D:\\Maya\\Earth\\scenes\\Earth.ma"
   },
   {
+    "type": "string",
+    "name": "outputFolder",
+    "label": "Output folder for render",
+    "default": "C:\\MayaProjects\\"
+  },
+  {
     "type": "integer",
     "name": "threads",
     "label": "Set number of threads",
