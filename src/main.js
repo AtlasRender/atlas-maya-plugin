@@ -1,9 +1,15 @@
 const {exec} = require("child_process");
 
+const pathToMaya = env.pathToMaya.replace(/"/g, "\\\"");
+const pathToMayaScene = pluginSettings.pathToMayaScene.replace(/"/g, "\\\"");
+const threads = pluginSettings.threads;
+const resolutionX = pluginSettings.resolutionX;
+const resolutionY = pluginSettings.resolutionY;
+
 const command = [
-    `"${env.pathToMaya}\\Render.exe" -r arnold -ai:lve 3 `,
-    `-s ${frame} -e ${frame} -x ${pluginSettings.resolutionX} -y ${pluginSettings.resolutionY} -ai:threads ${pluginSettings.threads} `,
-    `"${pluginSettings.pathToMayaScene}"`
+    `"${pathToMaya}\\Render.exe" -r arnold -ai:lve 3 `,
+    `-s ${frame} -e ${frame} -x ${resolutionX} -y ${resolutionY} -ai:threads ${threads} `,
+    `"${pathToMayaScene}"`
 ].join("");
 
 const cp = exec(command, (error, stdout, stderr) => {
